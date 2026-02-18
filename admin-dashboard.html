@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .sidebar { height: 100%; width: 250px; position: fixed; }
+        .content { margin-left: 260px; padding: 20px; }
+        .navbar { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar bg-light">
+        <h2 class="text-center">Admin Panel</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">User Management</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Product Management</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Order Management</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div>
+            <h3>Welcome to the Admin Dashboard!</h3>
+            <p>Use the sidebar to navigate through the features.</p>
+        </div>
+    </div>
+</body>
+</html>
