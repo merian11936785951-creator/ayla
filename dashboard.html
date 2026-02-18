@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayla CDN Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ayla CDN Dashboard</h1>
+    </header>
+    <main>
+        <section id="api-integration">
+            <h2>API Integration</h2>
+            <button id="fetchData">Fetch Data</button>
+            <div id="apiData"></div>
+        </section>
+        <section id="file-management">
+            <h2>File Management</h2>
+            <input type="file" id="fileInput">
+            <button id="uploadFile">Upload File</button>
+            <div id="fileList"></div>
+        </section>
+        <section id="channel-control">
+            <h2>Channel Control</h2>
+            <button id="startChannel">Start Channel</button>
+            <button id="stopChannel">Stop Channel</button>
+        </section>
+        <section id="live-monitoring">
+            <h2>Live Monitoring</h2>
+            <div id="monitorStatus"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ayla CDN. All rights reserved.</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $('#fetchData').click(function() {
+                $.ajax({
+                    url: 'https://api.aylacdn.com/data', // Sample API URL
+                    method: 'GET',
+                    success: function(data) {
+                        $('#apiData').html(JSON.stringify(data));
+                    }
+                });
+            });
+
+            $('#uploadFile').click(function() {
+                var file = $('#fileInput').prop('files')[0];
+                var formData = new FormData();
+                formData.append('file', file);
+
+                $.ajax({
+                    url: 'https://api.aylacdn.com/upload', // Sample upload URL
+                    method: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        alert('File uploaded successfully.');
+                    }
+                });
+            });
+
+            $('#startChannel').click(function() {
+                // Code to start the channel
+                alert('Channel started.');
+            });
+
+            $('#stopChannel').click(function() {
+                // Code to stop the channel
+                alert('Channel stopped.');
+            });
+
+            function updateMonitoring() {
+                // Code for live monitoring
+                $('#monitorStatus').html('Monitoring live data...');
+            }
+
+            setInterval(updateMonitoring, 5000); // Update monitoring every 5 seconds
+        });
+    </script>
+</body>
+</html>
