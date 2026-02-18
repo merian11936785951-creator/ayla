@@ -1,0 +1,9 @@
+{
+  "name": "streamlink-frontend",
+  "version": "1.0.0",
+  "description": "Frontend Streamlink + backend proxycdn (Claro TV)",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
